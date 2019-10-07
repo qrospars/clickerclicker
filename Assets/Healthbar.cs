@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Text healthText;
 
     // Update is called once per frame
     void Update()
     {
         
+        float maxHealth = GoblinSpawner.instance.enemyScriptableObject.health * GoblinSpawner.instance.enemyScriptableObject.level;
+        float currentHealth = GoblinSpawner.instance.goblin.health;
+        transform.localScale = new Vector3(currentHealth / maxHealth,1,1);
+
+        healthText.text = currentHealth + " / " + maxHealth;
     }
 }

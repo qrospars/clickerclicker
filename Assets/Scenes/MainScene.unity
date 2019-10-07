@@ -289,6 +289,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 243776409548806632, guid: c85e8109a029b48c993a76e74ca13609,
+        type: 3}
+      propertyPath: gnomeRedScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: ec3a178afb8fb47b4be8d064c004bb78,
+        type: 2}
+    - target: {fileID: 243776409548806632, guid: c85e8109a029b48c993a76e74ca13609,
+        type: 3}
+      propertyPath: gnomeGreenScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: e5fb84ad1ebad4b92976ee4c8ab43246,
+        type: 2}
+    - target: {fileID: 243776409548806632, guid: c85e8109a029b48c993a76e74ca13609,
+        type: 3}
+      propertyPath: gnomeGreenPrice
+      value: 
+      objectReference: {fileID: 1330999237}
+    - target: {fileID: 243776409548806632, guid: c85e8109a029b48c993a76e74ca13609,
+        type: 3}
+      propertyPath: gnomeRedPrice
+      value: 
+      objectReference: {fileID: 1630365127}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85e8109a029b48c993a76e74ca13609, type: 3}
 --- !u!1 &202949362
@@ -661,6 +683,7 @@ GameObject:
   - component: {fileID: 669361073}
   - component: {fileID: 669361075}
   - component: {fileID: 669361074}
+  - component: {fileID: 669361076}
   m_Layer: 5
   m_Name: HealthContent
   m_TagString: Untagged
@@ -724,6 +747,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 669361072}
   m_CullTransparentMesh: 0
+--- !u!114 &669361076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669361072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae31066c909904dfa995ca0161548cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 498208747}
 --- !u!1 &1135946731
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,9 +793,9 @@ RectTransform:
   m_Father: {fileID: 1999845330}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 175, y: 0}
   m_SizeDelta: {x: 350, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1135946733
@@ -913,6 +949,18 @@ Transform:
   m_Father: {fileID: 2124484084}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330999237 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3144928483820220485, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465427650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1465427650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1080,17 +1128,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3735441868643264477, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 243776409548806632, guid: c85e8109a029b48c993a76e74ca13609,
-        type: 3}
-    - target: {fileID: 3735441868643264477, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buyGnome
-      objectReference: {fileID: 0}
     - target: {fileID: 3735441869456769599, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1141,39 +1178,20 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3735441870081194007, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735441870081194007, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735441870081194007, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735441870081194007, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 243776409548806632, guid: c85e8109a029b48c993a76e74ca13609,
-        type: 3}
-    - target: {fileID: 3735441870081194007, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: buyGnome
-      objectReference: {fileID: 0}
-    - target: {fileID: 3735441870081194007, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5, type: 3}
+--- !u!114 &1630365127 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1630365127, guid: 4e0f8bd4aeeeb43a7b3fd121681378b5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1465427650}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655579178
 GameObject:
   m_ObjectHideFlags: 0

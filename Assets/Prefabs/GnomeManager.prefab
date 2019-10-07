@@ -43,5 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f99fa273eee5435f889e816592a9386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gnomeScriptableObject: {fileID: 11400000, guid: ec3a178afb8fb47b4be8d064c004bb78,
+  gnomeRedScriptableObject: {fileID: 11400000, guid: e5fb84ad1ebad4b92976ee4c8ab43246,
     type: 2}
+  gnomeGreenScriptableObject: {fileID: 0}
+  gnomeRedPrice: {fileID: 0}
+  gnomeGreenPrice: {fileID: 0}

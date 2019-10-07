@@ -2,14 +2,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class GnomeManager : MonoBehaviour
 {
-    public GnomeScriptableObject gnomeScriptableObject;
+    public GnomeScriptableObject gnomeRedScriptableObject;
+    public GnomeScriptableObject gnomeGreenScriptableObject;
+
+    public Text gnomeRedPrice;
+    public Text gnomeGreenPrice;
+
 
     private void Start()
     {
-        gnomeScriptableObject.amount = 0;
+        gnomeRedScriptableObject.amount = 0;
+        gnomeRedPrice.text = gnomeRedScriptableObject.price.ToString();
+        gnomeGreenPrice.text = gnomeGreenScriptableObject.price.ToString();
         InvokeRepeating("GnomeAttack", 0.0f, 1f);
     }
 
@@ -18,18 +27,32 @@ public class GnomeManager : MonoBehaviour
         
     }
 
-    public void buyGnome()
+    public void buyGnome(string color)
     {
-        if (GoblinSpawner.instance.enemyScriptableObject.score > gnomeScriptableObject.price)
+        switch (color)
         {
-            GoblinSpawner.instance.enemyScriptableObject.score -= gnomeScriptableObject.price;
-            GoblinSpawner.instance.scoreText.text = GoblinSpawner.instance.enemyScriptableObject.score.ToString();
-            gnomeScriptableObject.amount++;
+            case "red":
+                BuyGnomeHelper(gnomeRedScriptableObject, gnomeRedPrice);
+                break;
+            case "green":
+                BuyGnomeHelper(gnomeGreenScriptableObject, gnomeGreenPrice);
+                break;
         }
     }
 
+    private void BuyGnomeHelper(GnomeScriptableObject gnomeScriptableObject, Text priceText)
+    {
+        if (GoblinSpawner.instance.enemyScriptableObject.score >= gnomeScriptableObject.price)
+        {
+            GoblinSpawner.instance.enemyScriptableObject.score -= gnomeScriptableObject.price;
+            gnomeScriptableObject.amount++;
+            priceText.text = gnomeScriptableObject.price.ToString();
+            GoblinSpawner.instance.scoreText.text = GoblinSpawner.instance.enemyScriptableObject.score.ToString();
+        }
+    }
     private void GnomeAttack()
     {
-        GoblinSpawner.instance.hitGoblin(gnomeScriptableObject.amount * gnomeScriptableObject.damage);
+        GoblinSpawner.instance.hitGoblin(gnomeRedScriptableObject.amount * gnomeRedScriptableObject.damage);
+        GoblinSpawner.instance.hitGoblin(gnomeGreenScriptableObject.amount * gnomeGreenScriptableObject.damage);
     }
 }

@@ -7,6 +7,8 @@ public class EnemyScriptableObject : ScriptableObject
     public int level = 1;
     public int score = 0;
 
+    public AnimationCurve heatlhScaling;
+
     public void gotToNext()
     {
         score += level * health;

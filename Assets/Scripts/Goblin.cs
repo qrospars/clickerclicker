@@ -17,7 +17,6 @@ public class Goblin : MonoBehaviour
     }
     public void hit(float damage)
     {
-        Debug.Log("Hit by gnome - " + health);
         health = health - damage;
         if (health <= 0)
         {
