@@ -33,6 +33,5 @@ public class Goblin : MonoBehaviour
     private void Die()
     {
         GoblinSpawner.instance.goToNext();
-        Destroy(gameObject);
     }
 }

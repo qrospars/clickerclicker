@@ -65,11 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Healthbar.cs" />
     <Compile Include="Assets\Scripts\EnemyScriptableObject.cs" />
     <Compile Include="Assets\Scripts\GnomeManager.cs" />
     <Compile Include="Assets\Scripts\GnomeScriptableObject.cs" />
     <Compile Include="Assets\Scripts\Goblin.cs" />
     <Compile Include="Assets\Scripts\GoblinSpawner.cs" />
+    <Compile Include="Assets\SetScoreValue.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>/Users/quentinrospars/Documents/GitHub/ClickerClicker/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

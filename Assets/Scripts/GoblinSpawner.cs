@@ -1,28 +1,28 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class GoblinSpawner : MonoBehaviour
 {
     public EnemyScriptableObject enemyScriptableObject;
-    public GameObject entityToSpawn;
     public static GoblinSpawner instance;
 
-    private Goblin goblin;
+    public Goblin goblin;
+
+    public Sprite[] sprites;
+    public Text scoreText;
 
     private void Start()
     {
         instance = this;
         enemyScriptableObject.level = 1;
         enemyScriptableObject.score = 0;
+        scoreText.text = "0";
         SpawnGoblin();
     }
 
     private void SpawnGoblin()
     {
-        GameObject currentEntity = Instantiate(entityToSpawn, Vector3.zero, Quaternion.identity);
-        goblin = currentEntity.GetComponent<Goblin>();
+        goblin.GetComponent<Image>().sprite = sprites[Random.Range(0, sprites.Length)];
         goblin.health = enemyScriptableObject.health * enemyScriptableObject.level;
 
     }
@@ -30,6 +30,7 @@ public class GoblinSpawner : MonoBehaviour
     public void goToNext()
     {
         enemyScriptableObject.gotToNext();
+        scoreText.text = enemyScriptableObject.score.ToString();
         SpawnGoblin();
     }
 

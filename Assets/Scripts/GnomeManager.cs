@@ -23,6 +23,7 @@ public class GnomeManager : MonoBehaviour
         if (GoblinSpawner.instance.enemyScriptableObject.score > gnomeScriptableObject.price)
         {
             GoblinSpawner.instance.enemyScriptableObject.score -= gnomeScriptableObject.price;
+            GoblinSpawner.instance.scoreText.text = GoblinSpawner.instance.enemyScriptableObject.score.ToString();
             gnomeScriptableObject.amount++;
         }
     }
