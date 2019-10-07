@@ -15,15 +15,16 @@ public class GnomeManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            buyGnome();
-        }
+        
     }
 
-    void buyGnome()
+    public void buyGnome()
     {
-        gnomeScriptableObject.amount++;
+        if (GoblinSpawner.instance.enemyScriptableObject.score > gnomeScriptableObject.price)
+        {
+            GoblinSpawner.instance.enemyScriptableObject.score -= gnomeScriptableObject.price;
+            gnomeScriptableObject.amount++;
+        }
     }
 
     private void GnomeAttack()
