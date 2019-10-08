@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using System.Linq;
 
 [CustomEditor(typeof(GnomeManager))]
 public class GnomeManagerManagerEditor : Editor
@@ -11,10 +12,12 @@ public class GnomeManagerManagerEditor : Editor
 
 
     struct gnome{
-        string name;
-        int price;
-        float damage;
+        public string name;
+        public int price;
+        public float damage;
     }
+
+    private gnome templateGnome;
 
     private List<GnomeScriptableObject> gnomes;
 
@@ -29,31 +32,42 @@ public class GnomeManagerManagerEditor : Editor
 
              foreach (string file in System.IO.Directory.GetFiles(path))
             { 
-                //gnomes = AssetDatabase.LoadAllAssetsAtPath(path);
-                gnomes.Add(LoadAsset<GnomeScriptableObject>(path + "\file"));
+                if(!file.Contains("meta"))
+                gnomes.Add(LoadAsset<GnomeScriptableObject>(file));
             }
-         }
 
-        foreach (GnomeScriptableObject gnome in gnomeManager.gnomes){
-            EditorGUILayout.BeginFoldoutHeaderGroup(true, gnome.gnomeName);
-            EditorGUILayout.TextField(gnome.damage.ToString());
-            EditorGUILayout.TextField(gnome.price.ToString());
-            EditorGUILayout.EndFoldoutHeaderGroup();
+            Debug.Log(gnomes.Count);
          }
+        if(gnomes != null)
+            foreach (GnomeScriptableObject gnome in gnomes){
+                EditorGUILayout.BeginFoldoutHeaderGroup(true, gnome.gnomeName);
+                EditorGUILayout.TextField(gnome.damage.ToString());
+                EditorGUILayout.TextField(gnome.price.ToString());
+                EditorGUILayout.EndFoldoutHeaderGroup();
+             }
 
 
 
         EditorGUILayout.BeginFoldoutHeaderGroup(true, "Create New Gnome!");
 
-        string gnomename = EditorGUILayout.TextField("");
-        //EditorGUILayout.TextField(gnome.price.ToString());
+        templateGnome.name = EditorGUILayout.TextField("");
+        templateGnome.damage = EditorGUILayout.FloatField(0f);
+        templateGnome.price = EditorGUILayout.IntField(0);
+        if(GUILayout.Button("Add Gnome!")){
+            CreateNewGnome(templateGnome);
+        }
 
-        GUILayout.Button("Add Gnome!");
+        EditorGUILayout.EndFoldoutHeaderGroup();
      }
 
 
-     public void CreateNewGnome(){
-
+     private void CreateNewGnome(gnome g){
+         GnomeScriptableObject newGnome = new GnomeScriptableObject();
+         newGnome.name = g.name;
+         newGnome.damage = g.damage;
+         newGnome.price = g.price;
+         newGnome.amount = 0;
+         CreateOrReplaceAsset<GnomeScriptableObject>(newGnome, path);
      }
 
 
