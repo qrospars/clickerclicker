@@ -10,7 +10,7 @@ public class UpgradeManager : MonoBehaviour
     private int highestGold;
     private GnomeScriptableObject[] availableUpgrades;
 
-    private void 
+    //private void 
 
     void Start()
     {
