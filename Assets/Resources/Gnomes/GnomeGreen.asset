@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: GnomeGreen
   m_EditorClassIdentifier: Assembly-CSharp::GnomeScriptableObject
+  gnomeName: Green Gnome
   amount: 0
   damage: 5
   price: 100

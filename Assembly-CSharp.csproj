@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Goblin.cs" />
     <Compile Include="Assets\Scripts\GoblinSpawner.cs" />
     <Compile Include="Assets\SetScoreValue.cs" />
+    <Compile Include="Assets\UpgradeManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/GITHUB/UNITY/clickerclicker/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
