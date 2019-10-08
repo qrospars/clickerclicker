@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class GnomeManager : MonoBehaviour
 {
+    public List<GnomeScriptableObject> gnomes;
+
     public GnomeScriptableObject gnomeRedScriptableObject;
     public GnomeScriptableObject gnomeGreenScriptableObject;
 
@@ -16,6 +18,7 @@ public class GnomeManager : MonoBehaviour
 
     private void Start()
     {
+
         gnomeRedScriptableObject.amount = 0;
         gnomeRedPrice.text = gnomeRedScriptableObject.price.ToString();
         gnomeGreenPrice.text = gnomeGreenScriptableObject.price.ToString();
@@ -32,10 +35,10 @@ public class GnomeManager : MonoBehaviour
         switch (color)
         {
             case "red":
-                BuyGnomeHelper(gnomeRedScriptableObject, gnomeRedPrice);
+                BuyGnomeHelper(gnomes[0], gnomeRedPrice);
                 break;
             case "green":
-                BuyGnomeHelper(gnomeGreenScriptableObject, gnomeGreenPrice);
+                BuyGnomeHelper(gnomes[1], gnomeGreenPrice);
                 break;
         }
     }
