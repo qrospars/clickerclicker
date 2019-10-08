@@ -12,3 +12,11 @@ Temp/
 .idea/
 
 .vs/
+
+*.csproj
+
+*.sln
+
+*.cache
+
+Assets/ScriptableObject/GnomeGreen.asset~parent of 2df2ea3... Merge remote-tracking branch 'clickerclicker.meta
