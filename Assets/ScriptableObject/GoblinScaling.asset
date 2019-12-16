@@ -13,8 +13,10 @@ MonoBehaviour:
   m_Name: GoblinScaling
   m_EditorClassIdentifier: 
   health: 10
-  level: 6
-  score: 90
+  level: 7
+  currentGoldReward: 36
+  currentHealth: 73
+  maxLevel: 150
   heatlhScaling:
     serializedVersion: 2
     m_Curve:
@@ -30,11 +32,11 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 2
+      inSlope: 2.8901815
       outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
+      tangentMode: 1
+      weightedMode: 2
+      inWeight: 0.093595564
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

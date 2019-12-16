@@ -9,30 +9,38 @@ public class GoblinSpawner : MonoBehaviour
 
     public Goblin goblin;
 
+    [SerializeField]
+    private Text goblinName;
+
     public Sprite[] sprites;
+
+    [SerializeField] private string[] goblinNamesList;
+
     public Text scoreText;
 
     private void Start()
     {
         instance = this;
         enemyBehaviour.level = 1;
-        enemyBehaviour.currentGoldReward = 0;
+        enemyBehaviour.currentGoldReward = 5;
+        enemyBehaviour.currentHealth = 10;
         SpawnGoblin();
     }
 
     private void SpawnGoblin()
     {
         goblin.GetComponent<Image>().sprite = sprites[UnityEngine.Random.Range(0, sprites.Length)];
-        goblin.health = enemyBehaviour.health * enemyBehaviour.level;
+        goblinName.text = goblinNamesList[UnityEngine.Random.Range(0, goblinNamesList.Length)];
+        goblin.health = enemyBehaviour.currentHealth;
 
     }
 
     public void goToNext()
     {
-        enemyBehaviour.GotToNext();
         //GameManager.Instance.currentGold += enemyBehaviour.currentGoldReward;
         MoneyParticleSpawner.Instance.CreateParticleEffect(enemyBehaviour.currentGoldReward, true);
         GameManager.Instance.UpdateGoldText();
+        enemyBehaviour.GotToNext();
         SpawnGoblin();
     }
 

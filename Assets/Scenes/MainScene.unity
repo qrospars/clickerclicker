@@ -131,7 +131,6 @@ GameObject:
   - component: {fileID: 167485418}
   - component: {fileID: 167485420}
   - component: {fileID: 167485419}
-  - component: {fileID: 167485421}
   - component: {fileID: 167485422}
   - component: {fileID: 167485423}
   m_Layer: 5
@@ -157,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 270, y: 0}
+  m_AnchoredPosition: {x: 329, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &167485419
@@ -178,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 63f288b57d5e38e4ca24abfe8ddb3965, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1d869da20211292448f9b2e8c6715df2, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -196,19 +195,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 167485417}
   m_CullTransparentMesh: 0
---- !u!65 &167485421
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 167485417}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 84.2772, y: 99.93371, z: 1}
-  m_Center: {x: 0.36410207, y: -0.18204989, z: 0}
 --- !u!114 &167485422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +385,7 @@ PrefabInstance:
     - target: {fileID: 1747237830711818674, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1747237830711818674, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
@@ -419,7 +405,12 @@ PrefabInstance:
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: sprites.Array.size
-      value: 6
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
@@ -435,37 +426,37 @@ PrefabInstance:
         type: 3}
       propertyPath: sprites.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: 63f288b57d5e38e4ca24abfe8ddb3965,
+      objectReference: {fileID: 21300000, guid: f02d4059f2ccdbb4bac2fd054b66aed1,
         type: 3}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: sprites.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 96eaefeaa1c8c714c8d7036ddf7e3255,
+      objectReference: {fileID: 21300000, guid: 1d869da20211292448f9b2e8c6715df2,
         type: 3}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: sprites.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: 6ea068a4c2277ac43a4d5fe1b90f6e46,
+      objectReference: {fileID: 21300000, guid: fc6ad199ce37474498a5b5b2dd3a3c6e,
         type: 3}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: sprites.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: a83b10be9bf8e4246ae6080bd6dbddaf,
+      objectReference: {fileID: 21300000, guid: 7eda8aba5444f3a4aac41ce57c131a87,
         type: 3}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: sprites.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: e2807dce10c17844d8d8e4c56e558e36,
+      objectReference: {fileID: 21300000, guid: c1b58f78892d3b44e8b32728e7ab768f,
         type: 3}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
       propertyPath: sprites.Array.data[5]
       value: 
-      objectReference: {fileID: 21300000, guid: b05f13dfac7d29346bf8a09bd60702f7,
+      objectReference: {fileID: 21300000, guid: d96ab02d2918c2b4ab1c98de471d4e52,
         type: 3}
     - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
         type: 3}
@@ -473,6 +464,85 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: f75cbdf06019b4cb495fd3a0db89d5f4,
         type: 2}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: sprites.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ff610b4be3ba4f42aa1bafbf53ab93d,
+        type: 3}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: sprites.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 849837091ca16f04a86428569cce9844,
+        type: 3}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: sprites.Array.data[8]
+      value: 
+      objectReference: {fileID: 21300000, guid: 066269312b4397b4b8ba3c6465a0b65b,
+        type: 3}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: sprites.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d180b6006a2ab64b88e485bcd3e419b,
+        type: 3}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[0]
+      value: Goblin Alchemist
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[1]
+      value: Goblin Bandit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[2]
+      value: Goblin Mastermind
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[3]
+      value: Goblin Trickster
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[4]
+      value: Goblin Thief
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[5]
+      value: Goblin Mystic
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[6]
+      value: Goblin Scavenger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[7]
+      value: Goblin Pillager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[8]
+      value: Goblin Joker
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinNamesList.Array.data[9]
+      value: Goblin Chief
+      objectReference: {fileID: 0}
+    - target: {fileID: 1747237830711818675, guid: 0b3de379972e44be8930efab7a96ad98,
+        type: 3}
+      propertyPath: goblinName
+      value: 
+      objectReference: {fileID: 1655579180}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b3de379972e44be8930efab7a96ad98, type: 3}
 --- !u!1 &335161307
@@ -502,7 +572,7 @@ RectTransform:
   m_GameObject: {fileID: 335161307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 18.145052, y: 18.145052, z: 18.145052}
+  m_LocalScale: {x: 17.881948, y: 17.881948, z: 17.881948}
   m_Children: []
   m_Father: {fileID: 1933670186}
   m_RootOrder: 0
@@ -530,7 +600,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa0f2a3454681f74b8275d680d069e57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8eab3271d1852f4795c4355ee24239e, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -871,6 +941,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7018652676202803355, guid: 47ab2e488f11a14449aafe5419ae53e1,
         type: 3}
+    - target: {fileID: -4057370209611452880, guid: bcb84e73d7c049c4396cd78b018f8bfc,
+        type: 3}
+      propertyPath: maximumParticlesToSpawn
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 3803921010363890815, guid: bcb84e73d7c049c4396cd78b018f8bfc,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1856,7 +1931,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1933670186}
   - component: {fileID: 1933670185}
-  - component: {fileID: 1933670184}
   - component: {fileID: 1933670183}
   m_Layer: 5
   m_Name: Background image
@@ -1882,28 +1956,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1933670184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1933670182}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
 --- !u!223 &1933670185
 Canvas:
   m_ObjectHideFlags: 0
@@ -2691,7 +2743,7 @@ RectTransform:
   - {fileID: 3735441869364073276}
   - {fileID: 1477738569}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

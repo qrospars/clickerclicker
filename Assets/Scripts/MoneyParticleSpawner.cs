@@ -68,7 +68,7 @@ public class MoneyParticleSpawner : MonoBehaviour
                 {
                     if (j < 2)
                     {
-                        var offset = Random.Range(1, 15) / 100f;
+                        var offset = Random.Range(1, 7) / 100f;
                         bool sign = Random.Range(0, 2) == 1;
                         var newSpawn = new Vector3(spawnPosition.x + (sign ? 1 : -1) * offset * spawnPosition.x,
                             spawnPosition.y);
@@ -82,8 +82,8 @@ public class MoneyParticleSpawner : MonoBehaviour
 
                 yield return new WaitForSeconds(0.05f);
             }
-            Debug.Log("Number of particle to spawn: " + number);
-            Debug.Log("Particles spawned: " + DEBUGparticlesSpawned);
+            //Debug.Log("Number of particle to spawn: " + number);
+            //Debug.Log("Particles spawned: " + DEBUGparticlesSpawned);
         }
     }
 
