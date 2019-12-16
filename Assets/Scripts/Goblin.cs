@@ -8,13 +8,13 @@ public class Goblin : MonoBehaviour
 
     public void hit()
     {
-       
         health--;
         if (health <= 0)
         {
             Die();
         }
     }
+
     public void hit(float damage)
     {
         health = health - damage;
@@ -22,11 +22,6 @@ public class Goblin : MonoBehaviour
         {
             Die();
         }
-    }
-
-    public void OnMouseUp()
-    {
-        hit();
     }
 
     private void Die()

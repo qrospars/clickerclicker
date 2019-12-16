@@ -13,6 +13,36 @@ MonoBehaviour:
   m_Name: GnomeRed
   m_EditorClassIdentifier: 
   gnomeName: Red Gnome
-  amount: 1
-  damage: 1
-  price: 10
+  damage: 3
+  price: 50
+  maxLevel: 30
+  gnomeSprites:
+  - {fileID: 21300000, guid: bae0522a47a44e34698ad2a6f803adb3, type: 3}
+  - {fileID: 21300000, guid: 7d4d8ecaa077dc1458a47e43b24aabd5, type: 3}
+  - {fileID: 21300000, guid: 8d740fd50f0d7c44f8ccfa865ab7c88e, type: 3}
+  damageCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  startingPrice: 50
+  startingDamage: 2

@@ -4,20 +4,31 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GnomeHero upgradePrefab;
 
-    public int currentGold;
-    private int highestGold;
-    private GnomeScriptableObject[] availableUpgrades;
+    public static UpgradeManager Instance;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
-        
+        foreach(var hero in GameManager.Instance.currentHeroes)
+        {
+            var entry = Instantiate(upgradePrefab);
+            entry.Initialize();
+        }
+
+        ShowNextHero();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowNextHero()
     {
-        
+        if (GameManager.Instance.currentHeroes.Count <= GameManager.Instance.GnomesProgression.Count)
+        {
+            var entry = Instantiate(upgradePrefab, gameObject.transform);
+            entry.Initialize(GameManager.Instance.GnomesProgression[GameManager.Instance.currentHeroes.Count], true);
+        }
     }
 }
