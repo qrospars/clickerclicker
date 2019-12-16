@@ -11,7 +11,7 @@ public class Healthbar : MonoBehaviour
     void Update()
     {
         
-        float maxHealth = GoblinSpawner.instance.enemyScriptableObject.health * GoblinSpawner.instance.enemyScriptableObject.level;
+        float maxHealth = GoblinSpawner.instance.enemyBehaviour.health * GoblinSpawner.instance.enemyBehaviour.level;
         float currentHealth = GoblinSpawner.instance.goblin.health;
         transform.localScale = new Vector3(currentHealth / maxHealth,1,1);
 

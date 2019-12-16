@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class GoblinSpawner : MonoBehaviour
 {
-    public EnemyScriptableObject enemyScriptableObject;
+    public EnemyBehaviour enemyBehaviour;
     public static GoblinSpawner instance;
 
     public Goblin goblin;
@@ -14,23 +15,23 @@ public class GoblinSpawner : MonoBehaviour
     private void Start()
     {
         instance = this;
-        enemyScriptableObject.level = 1;
-        enemyScriptableObject.score = 0;
-        scoreText.text = "0";
+        enemyBehaviour.level = 1;
+        enemyBehaviour.currentGoldReward = 0;
         SpawnGoblin();
     }
 
     private void SpawnGoblin()
     {
-        goblin.GetComponent<Image>().sprite = sprites[Random.Range(0, sprites.Length)];
-        goblin.health = enemyScriptableObject.health * enemyScriptableObject.level;
+        goblin.GetComponent<Image>().sprite = sprites[UnityEngine.Random.Range(0, sprites.Length)];
+        goblin.health = enemyBehaviour.health * enemyBehaviour.level;
 
     }
 
     public void goToNext()
     {
-        enemyScriptableObject.gotToNext();
-        scoreText.text = enemyScriptableObject.score.ToString();
+        enemyBehaviour.GotToNext();
+        GameManager.Instance.currentGold += enemyBehaviour.currentGoldReward;
+        GameManager.Instance.UpdateGoldText();
         SpawnGoblin();
     }
 

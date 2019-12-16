@@ -9,17 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: GnomeGreen
-  m_EditorClassIdentifier: Assembly-CSharp::GnomeScriptableObject
-  gnomeName: Green Gnome
-  damage: 50
-  price: 1000
-  maxLevel: 60
+  m_Script: {fileID: 11500000, guid: 15c72c51d35484f75afd638e0e2e32f2, type: 3}
+  m_Name: Blue
+  m_EditorClassIdentifier: 
+  gnomeName: Blue Gnome
+  damage: 8
+  price: 350
+  maxLevel: 40
   gnomeSprites:
-  - {fileID: 21300000, guid: 9396225d50d4b434ca1d0baba37ccaca, type: 3}
-  - {fileID: 21300000, guid: a70397b1b5c5a394488b3f1e675e0e42, type: 3}
-  - {fileID: 21300000, guid: 1213d9d656dd82c4aae08a9e85026e8a, type: 3}
+  - {fileID: 21300000, guid: 6ef27c9a417aa6b45aab83896360861f, type: 3}
+  - {fileID: 21300000, guid: b3622271e774bd1479d95571f712375c, type: 3}
+  - {fileID: 21300000, guid: 6bd23665d1e200c4bbf7f930b78944eb, type: 3}
+  - {fileID: 21300000, guid: 10aa369335a69914996df9f0898ae8cd, type: 3}
   damageCurve:
     serializedVersion: 2
     m_Curve:
@@ -44,5 +45,5 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  startingPrice: 1000
-  startingDamage: 50
+  startingPrice: 350
+  startingDamage: 8
