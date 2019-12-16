@@ -28,7 +28,7 @@ public class GnomeScriptableObject : ScriptableObject
     {
         ++level;
         price = startingPrice + (int)(startingPrice * 10*damageCurve.Evaluate((float)level/maxLevel));
-        damage++;
+        damage+=startingDamage + (int)(startingDamage * 10 * damageCurve.Evaluate((float)level / maxLevel));
     }
 
     public Sprite GetCurrentSprite()

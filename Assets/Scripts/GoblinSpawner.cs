@@ -9,14 +9,12 @@ public class GoblinSpawner : MonoBehaviour
 
     public Goblin goblin;
 
-    [SerializeField]
-    private Text goblinName;
+    [SerializeField] private Text goblinName;
+    [SerializeField] private Text level;
 
     public Sprite[] sprites;
 
     [SerializeField] private string[] goblinNamesList;
-
-    public Text scoreText;
 
     private void Start()
     {
@@ -32,7 +30,7 @@ public class GoblinSpawner : MonoBehaviour
         goblin.GetComponent<Image>().sprite = sprites[UnityEngine.Random.Range(0, sprites.Length)];
         goblinName.text = goblinNamesList[UnityEngine.Random.Range(0, goblinNamesList.Length)];
         goblin.health = enemyBehaviour.currentHealth;
-
+        level.text = enemyBehaviour.level.ToString();
     }
 
     public void goToNext()

@@ -15,7 +15,7 @@ MonoBehaviour:
   gnomeName: Big Green Gnome
   damage: 1
   price: 10
-  maxLevel: 25
+  maxLevel: 1000
   gnomeSprites:
   - {fileID: 21300000, guid: 9396225d50d4b434ca1d0baba37ccaca, type: 3}
   - {fileID: 21300000, guid: a70397b1b5c5a394488b3f1e675e0e42, type: 3}

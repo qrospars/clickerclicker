@@ -12,6 +12,7 @@ public class UpgradeManager : MonoBehaviour
     {
         Instance = this;
     }
+
     void Start()
     {
         foreach(var hero in GameManager.Instance.currentHeroes)
@@ -25,7 +26,7 @@ public class UpgradeManager : MonoBehaviour
 
     public void ShowNextHero()
     {
-        if (GameManager.Instance.currentHeroes.Count <= GameManager.Instance.GnomesProgression.Count)
+        if (GameManager.Instance.currentHeroes.Count < GameManager.Instance.GnomesProgression.Count)
         {
             var entry = Instantiate(upgradePrefab, gameObject.transform);
             entry.Initialize(GameManager.Instance.GnomesProgression[GameManager.Instance.currentHeroes.Count], true);

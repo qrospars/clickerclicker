@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c72c51d35484f75afd638e0e2e32f2, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
-  gnomeName: Blue Gnome
-  damage: 8
-  price: 350
-  maxLevel: 40
+  gnomeName: Mr. Fluffbottom
+  damage: 53
+  price: 3850
+  maxLevel: 400
   gnomeSprites:
   - {fileID: 21300000, guid: 6ef27c9a417aa6b45aab83896360861f, type: 3}
   - {fileID: 21300000, guid: b3622271e774bd1479d95571f712375c, type: 3}

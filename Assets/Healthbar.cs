@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour
 {
-    public Text healthText;
+    [SerializeField]
+    private Text healthText;
+    [SerializeField]
+    private Image greenBar;
 
     // Update is called once per frame
     void Update()
     {
-        
-        float maxHealth = GoblinSpawner.instance.enemyBehaviour.health * GoblinSpawner.instance.enemyBehaviour.level;
+        float maxHealth = GoblinSpawner.instance.enemyBehaviour.currentHealth;
         float currentHealth = GoblinSpawner.instance.goblin.health;
-        transform.localScale = new Vector3(currentHealth / maxHealth,1,1);
+        greenBar.fillAmount = currentHealth / maxHealth;
 
         healthText.text = currentHealth + " / " + maxHealth;
     }
